@@ -1,6 +1,17 @@
 .App {
   text-align: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ 
+  background-color: azure;
+  
+}
+
+.mybg{
+  background-image: url('images/bg.jpg');
+  background-repeat: repeat-x;
+  height: 260px;
+  color: white;
+  text-decoration-color: white;
 }
 
 .form{

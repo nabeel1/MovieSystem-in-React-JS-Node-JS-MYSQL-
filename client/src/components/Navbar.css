@@ -1,0 +1,82 @@
+.mid {
+	background-color: blue;
+	display: inline-block;
+	width: 60%;
+	margin: auto;
+    text-decoration-color: white;
+}
+
+.navbar{
+ 
+	display:inline-block;
+}
+
+
+
+
+.navbar li{
+
+list-style: none;
+display:inline-block;
+
+margin:auto;
+}
+
+.navbar li a{
+text-decoration: none;
+color:white;
+font-size: 22px;
+padding:8px 20px;
+}
+
+.navbar li a:hover{
+color:rgb(151, 7, 247);
+border: darkmagenta;
+border-radius: 2px;
+font-size: 20px;
+}
+
+.navbar li a:active{
+background-color: deepskyblue;
+border-radius: 5px;
+}
+.right {
+	background-color: blue;
+display: inline-block;
+width: 8%;
+
+font-size: 18px;
+padding: 18px 26px;
+text-decoration-color: white;
+color: white;
+}
+
+
+	.right a{
+text-decoration:none;
+text-decoration-color: white;
+color: white;
+}
+.right:hover{
+font-weight:bolder;
+color: white;
+}
+
+.left {
+	background-color: blue;
+display: inline-block;
+width: 17%;
+font-size: 18px;
+padding: 18px 17px;
+color: white;
+
+
+}
+.left a{
+text-decoration:none;
+color: white;
+}
+.left:hover{
+font-weight:bolder;
+color: white;
+}

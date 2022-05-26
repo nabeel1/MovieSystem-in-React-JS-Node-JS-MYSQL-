@@ -1,13 +1,17 @@
 import React, {useState} from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Navbar from "./components/Navbar"
 import './App.css';
 import { useEffect } from 'react';
 import axios, { Axios } from 'axios';
+import AddMovie from "./pages/AddMovie";
+import Home from "./pages/Home";
 
 function App() {
   
     const [movieName, setmovieName] = useState("");
     const [movieReview, setmovieReview] = useState("");
-    const [movieReviewList, setMovieReviewList] = useState ([]);
+     const [movieReviewList, setMovieReviewList] = useState ([]);
     const [NewmovieReview, setNewmovieReview] = useState("");
 
     useEffect(() =>{
@@ -31,21 +35,33 @@ function App() {
       alert("Update Active"+movie);
   };
 
-    const submitReview = () => {
-      axios.post('http://127.0.0.1:9000/api/insert', {
-        movieName: movieName, movieReview:movieReview
-      }).then(()=>{
-          alert("Successful Insert");
-      });
+  const submitReview = () => {
+    axios.post('http://127.0.0.1:9000/api/insert', {
+      movieName: movieName, movieReview:movieReview
+    }).then(()=>{
+        alert("Successful Insert");
+    });
 
-      setMovieReviewList([...movieReviewList, {movieName: movieName, movieReview: movieReview}]);
+    setMovieReviewList([...movieReviewList, {movieName: movieName, movieReview: movieReview}]);
 
-    };
+  };
 
   return (
     <div className="App">
-      <h1>Movie Management System</h1>
-      <br />
+      
+       <Router>
+       <Navbar />
+      <Routes >
+        <Route path='/'  element={<Home />} />
+        <Route path='/AddMovie' element={<AddMovie />} />
+        <Route path='/UpdateMovie' element={<Home />} />
+        <Route path='/DeleteMovie' element={<Home />} />
+      </Routes >
+    </Router>
+    
+     <br />
+      
+     <br />
       <div className="form">
         <label>Movie Name:</label>
         <input type="text" name="movieName" onChange={(e) => {setmovieName(e.target.value)}} />
@@ -54,7 +70,7 @@ function App() {
         <button onClick={submitReview}>Submit</button>
       </div>
         <br />
-        
+
         
         {movieReviewList.map((val) => {
           return (
