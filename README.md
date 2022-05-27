@@ -42,6 +42,6 @@ If you are new developer remember to add Cors and configure in App.js (Which alr
 
 You can download and use this project. Happy Coding.
 
-![alt text](https://drive.google.com/file/d/1hosHpEQj2L8d8GpuPa84PXRmvAyu6SI_/view?usp=sharing)
+![Click here to see Screen Shot](https://drive.google.com/file/d/1hosHpEQj2L8d8GpuPa84PXRmvAyu6SI_/view?usp=sharing)
 
 https://drive.google.com/file/d/1hosHpEQj2L8d8GpuPa84PXRmvAyu6SI_/view?usp=sharing
