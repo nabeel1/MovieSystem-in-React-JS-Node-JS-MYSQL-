@@ -15,18 +15,18 @@ function App() {
     const [NewmovieReview, setNewmovieReview] = useState("");
 
     useEffect(() =>{
-      axios.get("http://127.0.0.1:9000/api/get").then((Response) => {
+      axios.get("https://movie-mysql-node.herokuapp.com/api/get").then((Response) => {
         setMovieReviewList(Response.data);
       });
     },[]);
 
     const deleteMovie = (movie) => {     
-        axios.delete(`http://127.0.0.1:9000/api/del/${movie}`);
+        axios.delete(`https://movie-mysql-node.herokuapp.com/api/del/${movie}`);
 
     };
 
     const updateMovie = (movie) => {     
-      axios.put('http://127.0.0.1:9000/api/update',{
+      axios.put('https://movie-mysql-node.herokuapp.com/api/update',{
         movieName: movie,
         movieReview: NewmovieReview
       });
@@ -36,7 +36,7 @@ function App() {
   };
 
   const submitReview = () => {
-    axios.post('http://127.0.0.1:9000/api/insert', {
+    axios.post('https://movie-mysql-node.herokuapp.com/api/insert', {
       movieName: movieName, movieReview:movieReview
     }).then(()=>{
         alert("Successful Insert");

@@ -4,10 +4,10 @@ const mysql = require('mysql');
 const bodyParser = require('body-parser');
 
 const db = mysql.createPool({
-host: "localhost",
-user: "root",
-password: "",
-database: "moviedb",
+host: "us-cdbr-east-05.cleardb.net",
+user: "b9ec5f4a22c75d",
+password: "bfd661c8",
+database: "heroku_c3244545d090310",
 });
 
 /* GET result from db */
